@@ -47,14 +47,6 @@ function showDebug(soapMessageDebug, regularDebug)
      
 }
 
-/*
- * Checks if debugging is currently enabled.
- */
-function isDebugging( )
-{
-	return window.top.debugWindow && !window.top.debugWindow.closed;
-}
-
 
 /*
  * If the debug window exists, write debug messages to it.
@@ -65,7 +57,7 @@ function debug( text, isSoapMessage )
 	//debug( birtSoapRequest.prettyPrintXML(request.responseXML.documentElement), true);
 	try
 	{
-		if ( isDebugging( ) )
+		if (window.top.debugWindow && !window.top.debugWindow.closed)
 		{
 			if(window.top.debugWindow.soapMsgWindow)
 			{
