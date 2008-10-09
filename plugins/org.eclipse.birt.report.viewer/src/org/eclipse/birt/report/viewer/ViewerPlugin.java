@@ -25,7 +25,6 @@ import org.eclipse.core.runtime.Status;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 
-import com.ibm.icu.util.TimeZone;
 import com.ibm.icu.util.ULocale;
 
 /**
@@ -134,9 +133,6 @@ public class ViewerPlugin extends Plugin
 						DEFAULT_MAX_IN_MEMORY_CUBE_SIZE );
 		plugin.getPluginPreferences( ).setDefault( WebViewer.USER_LOCALE,
 				ULocale.getDefault( ).getDisplayName( ) );
-		
-		plugin.getPluginPreferences( ).setDefault( WebViewer.USER_TIME_ZONE,
-				TimeZone.getDefault( ).getID( ) );
 
 		plugin.getPluginPreferences( ).setDefault( WebViewer.BIDI_ORIENTATION,
 				WebViewer.BIDI_ORIENTATION_AUTO );
